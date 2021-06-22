@@ -23,7 +23,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="lambda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -144,13 +144,14 @@ n ()
 alias cat='bat --theme="base16"'
 alias ll='n -Hde'
 alias ssh='TERM="xterm-256color" ssh'
+alias sail='./vendor/bin/sail'
 
 # ITERM (MACOS ONLY)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -e /usr/share/nvm/init-nvm.sh && source /usr/share/nvm/init-nvm.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/erikreinert/Development/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/erikreinert/Development/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/donsly/Development/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/donsly/Development/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/erikreinert/Development/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/erikreinert/Development/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/donsly/Development/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/donsly/Development/google-cloud-sdk/completion.zsh.inc'; fi
