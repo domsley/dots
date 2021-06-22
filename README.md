@@ -37,14 +37,14 @@ Two symlinks must be created in place of the local Neovim configuration paths:
 
 ```shell
 ln -s <root-path>/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
-ln -s <root-path>/dotfiles/nvim/lua/domsley ~/.config/nvim/lua/domsley
+ln -s <root-path>/dotfiles/nvim/lua/Default ~/.config/nvim/lua/Default
 ```
 
 Once both symlinks are created install all plugins with `:PackerSync` in Neovim.
 
 #### Keymaps
 
-To find keymaps for any given plugin check the module file for it in `./nvim/lua/domsley/plugins`.
+To find keymaps for any given plugin check the module file for it in `./nvim/lua/Default/plugins`.
 
 ### Oh-My-Tmux
 
