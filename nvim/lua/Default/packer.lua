@@ -31,7 +31,7 @@ local function packer_startup()
       'nvim-lua/lsp_extensions.nvim',
     },
     config = function ()
-      require'domsley.plugins.lsp'.init()
+      require'Default.plugins.lsp'.init()
     end
   }
 
@@ -40,7 +40,7 @@ local function packer_startup()
     'nvim-treesitter/nvim-treesitter',
     run = 'TSUpdate',
     config = function ()
-      require'domsley.plugins.treesitter'.init()
+      require'Default.plugins.treesitter'.init()
     end,
   }
 
@@ -56,8 +56,8 @@ local function packer_startup()
       'hrsh7th/vim-vsnip'
     },
     config = function ()
-      require'domsley.plugins.compe'.init()
-      require'domsley.plugins.compe_tabnine'.init()
+      require'Default.plugins.compe'.init()
+      require'Default.plugins.compe_tabnine'.init()
     end
   }
 
@@ -68,7 +68,7 @@ local function packer_startup()
     'nvim-telescope/telescope.nvim',
     requires = 'rmagatti/session-lens',
     config = function ()
-      require'domsley.plugins.telescope'.init()
+      require'Default.plugins.telescope'.init()
     end
   }
 
@@ -76,7 +76,7 @@ local function packer_startup()
   use {
     'folke/tokyonight.nvim',
     config = function ()
-      require 'domsley.plugins.tokyonight'.init()
+      require 'Default.plugins.tokyonight'.init()
     end
   }
 
@@ -85,7 +85,7 @@ local function packer_startup()
   use {
     'lewis6991/gitsigns.nvim',
     config = function ()
-      require'domsley.plugins.gitsigns'.init()
+      require'Default.plugins.gitsigns'.init()
     end
   }
 
@@ -93,7 +93,7 @@ local function packer_startup()
   use {
     'rmagatti/auto-session',
     config = function ()
-      require'domsley.plugins.auto_session'.init()
+      require'Default.plugins.auto_session'.init()
     end
   }
 
@@ -101,7 +101,7 @@ local function packer_startup()
   use {
     'hoob3rt/lualine.nvim',
     config = function ()
-      require 'domsley.plugins.lualine'.init()
+      require 'Default.plugins.lualine'.init()
     end
   }
   use 'preservim/nerdcommenter'
@@ -110,13 +110,13 @@ local function packer_startup()
   use {
     'voldikss/vim-floaterm',
     config = function ()
-      require 'domsley.plugins.floaterm'.init()
+      require 'Default.plugins.floaterm'.init()
     end
   }
   use {
     'takac/vim-hardtime', -- see http://vimcasts.org/blog/2013/02/habit-breaking-habit-making
     config = function ()
-      require'domsley.plugins.hardtime'.init()
+      require'Default.plugins.hardtime'.init()
     end
   }
 
@@ -132,7 +132,7 @@ local function packer_startup()
       'vimwiki/vimwiki'
     },
     config = function ()
-      require'domsley.plugins.zettel'.init()
+      require'Default.plugins.zettel'.init()
     end
   }
 end
