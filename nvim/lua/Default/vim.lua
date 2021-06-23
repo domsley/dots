@@ -42,7 +42,7 @@ end
 
 local function set_vim_wo()
   vim.wo.number = true
-  vim.wo.relativenumber = true
+  vim.wo.relativenumber = false
   vim.wo.wrap = false
 end
 
