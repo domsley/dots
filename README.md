@@ -29,6 +29,10 @@ The following dependencies must be installed before setup:
 - Oh-My-Zsh
 
 ### Neovim
+TabNine Requirements:
+```shell
+sudo apt install unzip
+```
 
 Two symlinks must be created in place of the local Neovim configuration paths:
 
