@@ -72,6 +72,14 @@ local function packer_startup()
     end
   }
 
+  -- NERDTree
+  use {
+    'preservim/nerdtree',
+    config = function ()
+        require'Default.plugins.nerdtree'.init()
+    end
+  }
+
   -- Themes
   use {
     'folke/tokyonight.nvim',
@@ -107,6 +115,7 @@ local function packer_startup()
   use 'preservim/nerdcommenter'
   use 'romgrk/nvim-treesitter-context'
   use 'kyazdani42/nvim-web-devicons'
+  use 'ThePrimeagen/vim-be-good'
   use {
     'voldikss/vim-floaterm',
     config = function ()

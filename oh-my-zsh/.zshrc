@@ -141,7 +141,7 @@ n ()
 }
 
 # ALIASES
-alias cat='bat --theme="base16"'
+alias cat='batcat --theme="base16"'
 alias ll='n -Hde'
 alias ssh='TERM="xterm-256color" ssh'
 alias sail='./vendor/bin/sail'
