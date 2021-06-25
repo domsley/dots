@@ -16,7 +16,7 @@ local function set_vim_o()
     expandtab = true,
     hidden = true,
     scrolloff = 3,
-    softtabstop = 2,
+    softtabstop = 4,
     showmode = false,
     termguicolors = true
   }
@@ -33,16 +33,16 @@ local function set_vim_o()
   -- Not yet in vim.o
   vim.cmd('set encoding=utf8')
   vim.cmd('set nowritebackup')
-  vim.cmd('set shiftwidth=2')
+  vim.cmd('set shiftwidth=4')
   vim.cmd('set secure')
   vim.cmd('set splitright')
-  vim.cmd('set tabstop=2')
+  vim.cmd('set tabstop=4')
   vim.cmd('set updatetime=300')
 end
 
 local function set_vim_wo()
   vim.wo.number = true
-  vim.wo.relativenumber = false
+  vim.wo.relativenumber = true
   vim.wo.wrap = false
 end
 
