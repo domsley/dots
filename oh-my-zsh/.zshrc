@@ -145,6 +145,7 @@ alias cat='batcat --theme="base16"'
 alias ll='n -Hde'
 alias ssh='TERM="xterm-256color" ssh'
 alias sail='./vendor/bin/sail'
+alias tt='taskwarrior-tui'
 
 # ITERM (MACOS ONLY)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
