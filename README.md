@@ -1,3 +1,5 @@
+![Preview](https://user-images.githubusercontent.com/16507635/123522307-c909f200-d6bc-11eb-8fcb-f589ccf4113f.png)
+
 ## Requirements
 
 The following dependencies must be installed before setup:
