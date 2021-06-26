@@ -12,6 +12,7 @@ local function init()
       'jsdoc',
       'json',
       'lua',
+      'vue',
       'python',
       'rust',
       'svelte',
