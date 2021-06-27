@@ -53,11 +53,13 @@ local function packer_startup()
                 run = './install.sh'
             },
             'wellle/tmux-complete.vim',
-            'hrsh7th/vim-vsnip'
+            'hrsh7th/vim-vsnip',
+            'onsails/lspkind-nvim'
         },
         config = function ()
             require'Default.plugins.compe'.init()
             require'Default.plugins.compe_tabnine'.init()
+            require'Default.plugins.lspkind'.init()
         end
     }
 
@@ -108,6 +110,10 @@ local function packer_startup()
 
     -- Utilities
     use {
+        'lukas-reineke/indent-blankline.nvim',
+        branch = 'lua'
+    }
+    use {
         'hoob3rt/lualine.nvim',
         config = function ()
             require 'Default.plugins.lualine'.init()
@@ -116,7 +122,6 @@ local function packer_startup()
     use 'preservim/nerdcommenter'
     use 'romgrk/nvim-treesitter-context'
     use 'kyazdani42/nvim-web-devicons'
-    use 'Yggdroot/indentLine'
     use 'ThePrimeagen/vim-be-good'
     use 'leafOfTree/vim-vue-plugin'
     use {
