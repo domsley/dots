@@ -34,12 +34,12 @@ local on_attach = function(client, bufnr)
   -- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec([[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]], false)
+    augroup lsp_document_highlight
+    autocmd! * <buffer>
+    autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+    autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+    augroup END
+      ]], false)
   end
 end
 
@@ -105,7 +105,8 @@ local function init()
     "sumneko_lua",
     "terraformls",
     "tsserver",
-    "yamlls"
+    "yamlls",
+    "vuels"
   }
 
   for _, s in pairs(lspconfig_servers) do
@@ -150,8 +151,8 @@ local function init()
       }
 
       vim.api.nvim_exec([[
-        autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', highlight = "NonText", enabled = {"TypeHint", "ChainingHint", "ParameterHint" } }
-      ]], false)
+      autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', highlight = "NonText", enabled = {"TypeHint", "ChainingHint", "ParameterHint" } }
+        ]], false)
     end
 
     if s == "terraformls" then
@@ -176,6 +177,25 @@ local function init()
       c.cmd = lspcontainers.command(s)
       c.root_dir = util.root_pattern(".git", vim.fn.getcwd())
     end
+
+    if s == 'vuels' then
+      c.before_init = function(params)
+        params.processId = vim.NIL
+      end
+
+      c.cmd = lspcontainers.command(s)
+      c.root_dir = util.root_pattern(".git", vim.fn.getcwd())
+    end
+
+    -- TODO: Add php support
+    --if s == "phpactor" then
+      --c.before_init = function(params)
+        --params.processId = vim.NIL
+      --end
+
+      --c.cmd = lspcontainers.command(s)
+      --c.root_dir = util.root_pattern(".git", vim.fn.getcwd())
+    --end
 
     require'lspconfig'[s].setup(c)
   end
