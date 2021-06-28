@@ -16,7 +16,7 @@ local function set_vim_o()
     expandtab = true,
     hidden = true,
     scrolloff = 3,
-    softtabstop = 4,
+    softtabstop = 2,
     showmode = false,
     termguicolors = true
   }
@@ -33,10 +33,10 @@ local function set_vim_o()
   -- Not yet in vim.o
   vim.cmd('set encoding=utf8')
   vim.cmd('set nowritebackup')
-  vim.cmd('set shiftwidth=4')
+  vim.cmd('set shiftwidth=2')
   vim.cmd('set secure')
   vim.cmd('set splitright')
-  vim.cmd('set tabstop=4')
+  vim.cmd('set tabstop=2')
   vim.cmd('set updatetime=300')
 end
 
@@ -55,7 +55,7 @@ local function set_keymaps()
   map('n', '<leader>j', '<CMD>wincmd j<CR>', options)
   map('n', '<leader>k', '<CMD>wincmd k<CR>', options)
   map('n', '<leader>l', '<CMD>wincmd l<CR>', options)
-  map('n', '<C>c', '<esc>', options)
+  map('i', ',,', '<esc>', options)
 end
 
 
