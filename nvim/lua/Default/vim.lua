@@ -38,26 +38,22 @@ local function set_vim_o()
   vim.cmd('set splitright')
   vim.cmd('set tabstop=2')
   vim.cmd('set updatetime=300')
+  vim.cmd('set linebreak')
+  vim.cmd('set nolist')
 end
 
 local function set_vim_wo()
   vim.wo.number = true
   vim.wo.relativenumber = true
-  vim.wo.wrap = false
+  vim.wo.wrap = true
 end
 
 local function set_keymaps()
   local map = vim.api.nvim_set_keymap
-
   local options = { noremap = false }
 
-  map('n', '<leader>h', '<CMD>wincmd h<CR>', options)
-  map('n', '<leader>j', '<CMD>wincmd j<CR>', options)
-  map('n', '<leader>k', '<CMD>wincmd k<CR>', options)
-  map('n', '<leader>l', '<CMD>wincmd l<CR>', options)
-  map('i', ',,', '<esc>', options)
+  map('i', '<C>j', '<esc>', options)
 end
-
 
 local function init()
   set_augroup()
