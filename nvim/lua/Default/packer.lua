@@ -111,7 +111,12 @@ local function packer_startup()
       require 'Default.plugins.lualine'.init()
     end
   }
-  use 'preservim/nerdcommenter'
+  use {
+    'terrortylor/nvim-comment',
+    config = function ()
+      require 'Default.plugins.nvim_comment'.init()
+    end
+  }
   use 'romgrk/nvim-treesitter-context'
   use 'kyazdani42/nvim-web-devicons'
   use 'ThePrimeagen/vim-be-good'
