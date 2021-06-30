@@ -52,7 +52,7 @@ local function set_keymaps()
   local map = vim.api.nvim_set_keymap
   local options = { noremap = false }
 
-  map('i', '<C>j', '<esc>', options)
+  map('n', '<C>C', '<esc>', options)
 end
 
 local function init()

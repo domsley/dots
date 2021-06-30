@@ -12,7 +12,6 @@ The following dependencies must be installed before setup:
 - [Neovim (nightly)](https://github.com/neovim/neovim/releases/tag/nightly): Editor
 - [Nnn](https://github.com/jarun/nnn): File Manager
 - [Oh-My-Tmux](https://github.com/gpakosz/.tmux): Terminal Multiplexer Environment
-- [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh): Shell Environment
 - [Packer](https://github.com/wbthomason/packer.nvim): Package Manager
 - [Ripgrep](https://github.com/BurntSushi/ripgrep): Search
 - [Taskwarrior](https://github.com/GothenburgBitFactory/taskwarrior): Task Manager
@@ -31,10 +30,9 @@ The following dependencies must be installed before setup:
 - Oh-My-Zsh
 
 ### Neovim
-TabNine Requirements:
-```shell
-sudo apt install unzip
-```
+
+#### TabNine
+Make sure you have `unzip` installed
 
 Two symlinks must be created in place of the local Neovim configuration paths:
 
@@ -52,12 +50,12 @@ Once both symlinks are created install all plugins with `:PackerSync` in Neovim.
 
 To find keymaps for any given plugin check the module file for it in `./nvim/lua/Default/plugins`.
 
-### Oh-My-Tmux
+### Tmux
 
-One symlinks must be created in place of the local `oh-my-tmux` configuration paths:
+One symlink must be created in place of the local `tmux` configuration paths:
 
 ```shell
-ln -s <root-path>/dotfiles/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
+ln -s <root-path>/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ```
 
 ### Oh-My-Zsh
