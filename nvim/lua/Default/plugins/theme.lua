@@ -6,8 +6,7 @@ local function init()
   --vim.g.tokyonight_transparent = true
 
   -- Load colorscheme
-  --vim.cmd[[colorscheme iceberg]]
-  vim.cmd('colorscheme iceberg')
+  vim.cmd[[colorscheme iceberg]]
 
 end
 

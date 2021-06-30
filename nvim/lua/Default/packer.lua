@@ -75,11 +75,11 @@ local function packer_startup()
   }
 
   -- Themes
+  use 'folke/tokyonight.nvim'
   use {
-    'folke/tokyonight.nvim',
     'cocopon/iceberg.vim',
     config = function ()
-      require 'Default.plugins.themes'.init()
+      require 'Default.plugins.theme'.init()
     end
   }
 
