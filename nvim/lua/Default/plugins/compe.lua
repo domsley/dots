@@ -27,7 +27,7 @@ local function init()
 
       -- External plugin
       treesitter = true;
-      vsnip = true;
+      luasnip = true;
 
       -- External source
       tabnine = true;
