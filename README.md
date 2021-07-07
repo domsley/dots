@@ -11,7 +11,6 @@ The following dependencies must be installed before setup:
 - [Lazygit](https://github.com/jesseduffield/lazygit): Git Integration
 - [Neovim (nightly)](https://github.com/neovim/neovim/releases/tag/nightly): Editor
 - [Nnn](https://github.com/jarun/nnn): File Manager
-- [Oh-My-Tmux](https://github.com/gpakosz/.tmux): Terminal Multiplexer Environment
 - [Packer](https://github.com/wbthomason/packer.nvim): Package Manager
 - [Ripgrep](https://github.com/BurntSushi/ripgrep): Search
 - [Taskwarrior](https://github.com/GothenburgBitFactory/taskwarrior): Task Manager
